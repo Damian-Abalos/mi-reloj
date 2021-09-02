@@ -1,0 +1,156 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+body{
+    background: linear-gradient(to right, hsl(276, 100%, 50%), hsl(254, 100%, 50%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.reloj{
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(javascript.png);
+    border-radius: 50%;
+    border: 5px solid rgb(0, 0, 0);
+    position: relative;
+}
+
+.reloj .numero{
+    --rotacion: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotacion));
+    font-size: 1.7rem;
+}
+.comillas{
+    color: rgb(165, 1, 1);
+}
+
+.reloj .numero1 {--rotacion: 30deg;}
+.reloj .numero1-a {--rotacion: 36deg;}
+.reloj .numero1-b {--rotacion: 42deg;}
+.reloj .numero1-c {--rotacion: 48deg;}
+.reloj .numero1-d {--rotacion: 54deg;}
+ 
+.reloj .numero2 {--rotacion: 60deg;}
+.reloj .numero2-a {--rotacion: 66deg;}
+.reloj .numero2-b {--rotacion: 72deg;}
+.reloj .numero2-c {--rotacion: 78deg;}
+.reloj .numero2-d {--rotacion: 84deg;}
+ 
+.reloj .numero3 {--rotacion: 90deg;}
+.reloj .numero3-a {--rotacion: 96deg;}
+.reloj .numero3-b {--rotacion: 102deg;}
+.reloj .numero3-c {--rotacion: 108deg;}
+.reloj .numero3-d {--rotacion: 114deg;}
+ 
+.reloj .numero4 {--rotacion: 120deg;}
+.reloj .numero4-a {--rotacion: 126deg;}
+.reloj .numero4-b {--rotacion: 132deg;}
+.reloj .numero4-c {--rotacion: 138deg;}
+.reloj .numero4-d {--rotacion: 144deg;}
+ 
+.reloj .numero5 {--rotacion: 150deg;}
+.reloj .numero5-a {--rotacion: 156deg;}
+.reloj .numero5-b {--rotacion: 162deg;}
+.reloj .numero5-c {--rotacion: 168deg;}
+.reloj .numero5-d {--rotacion: 174deg;}
+ 
+.reloj .numero6 {--rotacion: 180deg;}
+.reloj .numero6-a {--rotacion: 186deg;}
+.reloj .numero6-b {--rotacion: 192deg;}
+.reloj .numero6-c {--rotacion: 198deg;}
+.reloj .numero6-d {--rotacion: 204deg;}
+ 
+.reloj .numero7 {--rotacion: 210deg;}
+.reloj .numero7-a {--rotacion: 216deg;}
+.reloj .numero7-b {--rotacion: 222deg;}
+.reloj .numero7-c {--rotacion: 228deg;}
+.reloj .numero7-d {--rotacion: 234deg;}
+ 
+.reloj .numero8 {--rotacion: 240deg;}
+.reloj .numero8-a {--rotacion: 246deg;}
+.reloj .numero8-b {--rotacion: 252deg;}
+.reloj .numero8-c {--rotacion: 258deg;}
+.reloj .numero8-d {--rotacion: 264deg;}
+ 
+.reloj .numero9 {--rotacion: 270deg;}
+.reloj .numero9-a {--rotacion: 276deg;}
+.reloj .numero9-b {--rotacion: 282deg;}
+.reloj .numero9-c {--rotacion: 288deg;}
+.reloj .numero9-d {--rotacion: 294deg;}
+ 
+.reloj .numero10 {--rotacion: 300deg;}
+.reloj .numero10-a {--rotacion: 306deg;}
+.reloj .numero10-b {--rotacion: 312deg;}
+.reloj .numero10-c {--rotacion: 318deg;}
+.reloj .numero10-d {--rotacion: 324deg;}
+ 
+.reloj .numero11 {--rotacion: 330deg;}
+.reloj .numero11-a {--rotacion: 336deg;}
+.reloj .numero11-b {--rotacion: 342deg;}
+.reloj .numero11-c {--rotacion: 348deg;}
+.reloj .numero11-d {--rotacion: 354deg;}
+ 
+.reloj .numero12-a {--rotacion: 6deg;}
+.reloj .numero12-b {--rotacion: 12deg;}
+.reloj .numero12-c {--rotacion: 18deg;}
+.reloj .numero12-d {--rotacion: 24deg;}
+ 
+.reloj .aguja{
+    --rotacion: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    /* border: 1px solid white; */
+    border-radius: 10px 10px 0 0;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotacion) * 1deg));
+}
+
+.reloj::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.reloj .aguja.segundos{
+    width: 3px;
+    height: 45%;
+    background-color: red;
+
+}
+.reloj .aguja.minutos{
+    width: 7px;
+    height: 40%;
+    background-color: rgb(12, 100, 0);
+    border: 1px solid white;
+
+}
+.reloj .aguja.horas{
+    width: 10px;
+    height: 32%;
+    background-color: rgb(2, 0, 116);
+    border: 1px solid white;
+
+}
